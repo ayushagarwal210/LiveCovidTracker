@@ -7,8 +7,7 @@ const Covid = () => {
     try {
       const res = await fetch('https://api.covid19india.org/data.json')
       const data = await res.json()
-      console.log(data.statewise[0])
-      setData(data.statewise[0])
+      setData(data.statewise)
     } catch (error) {
       console.log(error)
     }
@@ -21,69 +20,76 @@ const Covid = () => {
       <section>
         <h1>🔴Live</h1>
         <h2>COVID-19 CORONAVIRUS TRACKER</h2>
-        <ul>
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>OUR</span> COUNTRY
-                </p>
-                <p className="card_total card_small">INDIA</p>
+        {data.map((state) => {
+          return (
+            <div key={state.state} id={state.state}>
+              <h1 className="heading">{state.state}</h1>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>OUR</span> STATE
+                    </p>
+                    <p className="card_total card_small">{state.state}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </li>
 
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>TOTAL</span> RECOVERED
-                </p>
-                <p className="card_total card_small">{data.recovered}</p>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>TOTAL</span> RECOVERED
+                    </p>
+                    <p className="card_total card_small">{state.recovered}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>TOTAL</span> CONFIRMED
+                    </p>
+                    <p className="card_total card_small">{state.confirmed}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>TOTAL</span> DEATHS
+                    </p>
+                    <p className="card_total card_small">{state.deaths}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>TOTAL</span> ACTIVE
+                    </p>
+                    <p className="card_total card_small">{state.active}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="card_main">
+                  <div className="card_inner">
+                    <p className="card_name">
+                      <span>LAST</span> UPDATED
+                    </p>
+                    <p className="card_total card_small">
+                      {state.lastupdatedtime}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>TOTAL</span> CONFIRMED
-                </p>
-                <p className="card_total card_small">{data.confirmed}</p>
-              </div>
-            </div>
-          </li>
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>TOTAL</span> DEATHS
-                </p>
-                <p className="card_total card_small">{data.deaths}</p>
-              </div>
-            </div>
-          </li>
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>TOTAL</span> ACTIVE
-                </p>
-                <p className="card_total card_small">{data.active}</p>
-              </div>
-            </div>
-          </li>
-          <li className="card">
-            <div className="card_main">
-              <div className="card_inner">
-                <p className="card_name">
-                  <span>LAST</span> UPDATED
-                </p>
-                <p className="card_total card_small">{data.lastupdatedtime}</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+          )
+        })}
       </section>
     </>
   )

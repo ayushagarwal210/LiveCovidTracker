@@ -3,11 +3,18 @@ section {
   place-items: center;
   background-color: black;
   color: aliceblue;
-  height: 100vh;
+  height: 100%;
 }
 
 section > h2 {
   font-size: 3rem;
+}
+
+.heading {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  /* border-bottom: 2px solid wheat; */
 }
 
 .card {
@@ -16,23 +23,16 @@ section > h2 {
   flex-direction: column;
   background-color: #6e2fe2;
   margin: 20px;
-  height: max-content;
+  height: 25vh;
   box-shadow: -3px 4px 17px -7px rgb(253, 252, 252);
   border-radius: 8px;
-}
-
-ul:after {
-  display: table;
-}
-
-.card {
   float: left;
-  width: 28%;
+  width: 30vw;
 }
 
 .card_inner {
   text-align: center;
-  padding: 3px;
+  padding: 6px;
 }
 
 .card:hover {

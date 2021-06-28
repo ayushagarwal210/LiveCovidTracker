@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Covid from './Covid'
 import Vaccine from './Vaccine'
 
@@ -31,6 +31,7 @@ const Navbar = () => {
             </div>
           </ul>
         </div>
+
         <Switch>
           <Route path="/corona">
             <Covid />

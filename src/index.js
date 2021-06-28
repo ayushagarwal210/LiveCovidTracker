@@ -6,9 +6,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 )

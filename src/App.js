@@ -1,10 +1,10 @@
 import React from 'react'
-import Covid from './components/Covid'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <>
-      <Covid />
+      <Navbar />
     </>
   )
 }

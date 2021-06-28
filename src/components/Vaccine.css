@@ -1,0 +1,93 @@
+.Vaccine {
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+
+.Vaccine_body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #6e2fe2;
+  margin: 20px;
+  box-shadow: -3px 4px 17px -7px rgb(253, 252, 252);
+  border-radius: 8px;
+  width: 80%;
+  padding: 20px;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+.address {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+h3 {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+
+.timing {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+.age {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+.available {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+.dose {
+  font-size: 1.5rem;
+  color: rgb(176, 247, 176);
+}
+
+.left {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  flex: 0.5;
+}
+
+.right {
+  /* display: flex; */
+  flex: 0.5;
+}
+
+span {
+  font-size: 1rem;
+  color: rgb(243, 116, 116);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search > input {
+  /* border: none; */
+  outline: none;
+  border: 2px solid black;
+  width: 30vw;
+  height: 2vw;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: larger;
+  padding: 6px;
+  justify-content: center;
+}
+
+.search > input:hover {
+  border: 1px solid black;
+}
+
+.warning {
+  color: yellow;
+  text-align: center;
+  font-size: 2rem;
+}

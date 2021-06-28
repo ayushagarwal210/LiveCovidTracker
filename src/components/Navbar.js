@@ -1,12 +1,12 @@
 import React from 'react'
 import './Navbar.css'
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Covid from './Covid'
 import Vaccine from './Vaccine'
 
 const Navbar = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <div className="Navbar">
           <ul>
